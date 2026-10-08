@@ -8,7 +8,8 @@ Homepage: https://pve.proxmox.com
 
 Package: ksm-control-daemon
 Architecture: all
-Depends: bash (>= 3.2), systemd
+Pre-Depends: ${misc:Pre-Depends}
+Depends: bash (>= 3.2), systemd <!pkg.ksm-control-daemon.lsbservice>
 Description: Kernel Samepage Merging (KSM) Tuning Daemon
  This package contains the KSM tuning daemon which controls whether
  ksm should ksm search duplicated pages.

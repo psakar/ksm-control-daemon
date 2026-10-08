@@ -3,3 +3,4 @@ ksmtuned.diff
 adjust-ksm-slepp.diff
 awk-printf.diff
 use-pss-instead-of-rsz.diff
+init-script-always-start.diff

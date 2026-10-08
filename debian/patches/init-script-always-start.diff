@@ -1,0 +1,18 @@
+Description: drop the START switch of /etc/default/ksmtuned from the init script
+ Debian policy wants init scripts to start their service whenever called;
+ disable it at boot with update-rc.d instead. Only used by the
+ pkg.ksm-control-daemon.lsbservice build, which installs the init script.
+
+--- a/ksmtuned.init
++++ b/ksmtuned.init
+@@ -46,10 +46,6 @@ if [ -f /etc/default/$prog ] ; then
+         . /etc/default/$prog
+ fi
+ 
+-if [ "$START" != "yes" ]; then
+-        exit 0
+-fi
+-
+ start() {
+ 
+     [ -d /sys/kernel/mm/ksm/ ] || exit 0;
