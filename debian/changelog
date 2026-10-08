@@ -1,3 +1,11 @@
+ksm-control-daemon (1.5-1+devuan1) trixie; urgency=medium
+
+  * build for systemd-free derivatives like Devuan (sysvinit or OpenRC),
+    with the init-system changes of the feature/init-systems-refactoring
+    branch; built with the pkg.ksm-control-daemon.lsbservice profile
+
+ -- Petr Sakař <petr.sakar@chare.eu>  Thu, 08 Oct 2026 14:28:33 +0200
+
 ksm-control-daemon (1.5-1) bookworm; urgency=medium
 
   * fix formatting when summing up large numbers of memory
